@@ -44,10 +44,23 @@ div {
 	display: flex;
 }
 
+section {
+	padding: 6rem 0;
+}
+.section-container {
+	width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
 .section-header {
 	font-size: 30px;
 	display: block;
 	text-align: center;
+}
+.header-underline {
+	width: 40%;
 }
 
 /*------------ COMPONENTS ---------------*/
@@ -64,7 +77,7 @@ header {
 	letter-spacing: 1px;
 	text-align: center;
 	z-index: 99999;
-	background-color: #70C2C5;
+	background-color: #E9E0DA;
 }
 .header-title {
 	display: block;
@@ -80,6 +93,18 @@ header {
   top: -70px; /* same as header height */
 }
 .navbar {
+	padding-top: ;
+}
+.navbar .navbar-brand {
+	float: left;
+	padding-left: 6rem;
+}
+.navbar .logo {
+	min-width: auto;
+	max-height: 70px;
+}
+.navbar ul {
+	float: right;
 	padding-top: 10px;
 }
 .navbar ul li {
@@ -87,7 +112,7 @@ header {
 }
 
 .navbar ul li a {
-	border: 1px solid #fff;
+	border-bottom: 1px solid #fff;
 	padding: 5px 20px;
 	text-transform: uppercase;
 }
@@ -95,7 +120,7 @@ header {
 /*--- MASTHEAD ---*/
 .masthead {
 	min-height: 100vh;
-	background-color: #70C2C5;
+	background-color: #E9E0DA;
 	/*background-image: url('../img/mandala.png');
 	background-position: center top;
 	background-size: cover;
@@ -103,23 +128,30 @@ header {
 	background-attachment: fixed;*/
 }
 .masthead {
-	display: flex;
+	font-size: 30px;
+	line-height: 2em;
+}
+.masthead {
+	text-align:center;
+}
+.masthead .flex {
 	justify-content: center;
 	align-items: center;
-	padding-top: 50px;
-}
-.masthead .flex img {
-	border-radius:40%;
-	min-width: 200px;
 }
 /*--- ABOUT ---*/
-.about {
-	padding: 50px;
+#about {
+	padding: 100px;
 	min-height: 400px;
+}
+#about .section-text {
+	padding: 0 100px;
 }
 
 /*--- WORK ---*/
-.work .flex {
+#work {
+	padding: 100px;
+}
+#work .flex {
 	flex-direction: row;
 	x-justify-content: space-around;
     x-align-items: stretch;
@@ -128,15 +160,15 @@ header {
 	
 	padding: 10px;
 }
-.work .flex > * {
+#work .flex > * {
 	margin: 10px;
 	background-color: #f2f2f2;
 }
-.work .flex {
+#work .flex {
 	padding: 50px;
 	width: auto;
 }
-.work .flex img {
+#work .flex img {
 	max-width: 100%;
 	height: 300px;
 }
@@ -145,15 +177,26 @@ header {
 	cursor: pointer;
 }
 
-/*--- CONTACT ---*/
-.contact {
-	padding: 50px;
+.portfolio-item {
 	text-align: center;
+	width: 33.3%;
+	padding: 10px;
+}
+
+/*--- CONTACT ---*/
+#contact {
+	padding: 100px;
+	text-align: center;
+	background-color: #E9E0DA;
 }
 
 /*--- FOOTER ---*/
 footer {
+	padding: ;
 	text-align: center;
+	background-color: #5D6F7F;
+	min-height: 100px;
+	color: #ffffff;
 }
 
 /*--- PORTFOLIO MODALS ---*/
@@ -170,7 +213,7 @@ footer {
 }
 .modal-content {
 	background-color: #f4f4f4;
-	margin: 20% auto;
+	margin: 8% auto;
 	width: 50%; /* can set to fixed width, ex: 400px*/
 	padding: 20px;
 	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
@@ -180,17 +223,24 @@ footer {
 }
 
 .modal-content-left {
-	
+	float:;
+	text-align: center;
+}
+.modal-content-left img {
+	max-width: 400px;
+	margin: 0 auto;
 }
 .modal-content-right {
 	
+}
+.modal-footer {
+	padding: 10px;
 }
 .closeBtn {
 	color: #000;
 	float: right;
 	font-size: 30px;
 }
-
 .closeBtn:hover, .closeBtn:focus {
 	color: #70C2C5;
 	text-decoration: none;
