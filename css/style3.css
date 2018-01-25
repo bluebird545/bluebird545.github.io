@@ -29,24 +29,21 @@ a:hover {
 	color: #;
 	opacity:1;
 }
-
-div {
-	display: block;
+section {
+	padding: 6rem 0;
 }
+
 
 /*------------ BASIC LAYOUT ---------------*/
 .container {
 	margin: 0 auto;
-	padding-top: 70px;
+	padding-top: 62px;
 }
 
 .flex {
 	display: flex;
 }
 
-section {
-	padding: 6rem 0;
-}
 .section-container {
 	width: 100%;
     padding-right: 15px;
@@ -71,13 +68,13 @@ header {
 	top: 0;
 	transition: top 0.2s ease-in-out;
 	width: 100%;
-	height: 70px;
+	height: 62px;
 	font-size: 14px;
 	font-weight: ;
 	letter-spacing: 1px;
 	text-align: center;
 	z-index: 99999;
-	background-color: #E9E0DA;
+	background-color: #D5B9B7;
 }
 .header-title {
 	display: block;
@@ -98,6 +95,7 @@ header {
 .navbar .navbar-brand {
 	float: left;
 	padding-left: 6rem;
+	text-transform: uppercase;
 }
 .navbar .logo {
 	min-width: auto;
@@ -118,60 +116,90 @@ header {
 }
 
 /*--- MASTHEAD ---*/
-.masthead {
-	min-height: 100vh;
-	background-color: #E9E0DA;
-	/*background-image: url('../img/mandala.png');
+.intro {
+	min-height: 70vh;
+	background: linear-gradient(to bottom, #D5B9B7, #56555C);
+	/*background-color: #E9E0DA;
+	background-image: url('../img/mandala.png');
 	background-position: center top;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;*/
 }
-.masthead {
-	font-size: 30px;
-	line-height: 2em;
-}
-.masthead {
-	text-align:center;
-}
-.masthead .flex {
+.intro {
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	align-items: center;
 }
+.intro .title {
+	text-align: ;
+	padding-left: 25%;
+}
+.intro .title1 {
+	font-size: 100px;
+	font-family: "Lobster", sans-serif;
+	color: #ffffff;
+	letter-spacing: 3px;
+}
+.intro .me {
+	padding-left: 25%;
+	margin: 0;
+	font-size: 30px;
+}
+.intro .me p {
+	margin: 0;
+	line-height:1.5em;
+}
+.social-link {
+	background-color: pink;
+	border-radius: 50%;
+	padding: 5px 10px 10px 10px;
+}
+
 /*--- ABOUT ---*/
 #about {
 	padding: 100px;
-	min-height: 400px;
+	min-height: auto;
 }
-#about .section-text {
+/*#about .section-text {
 	padding: 0 100px;
-}
+}*/
 
-/*--- WORK ---*/
-#work {
+/*--- PORTFOLIO ---*/
+#portfolio {
 	padding: 100px;
 }
-#work .flex {
+#portfolio .flex {
 	flex-direction: row;
 	x-justify-content: space-around;
     x-align-items: stretch;
     /*max-width: 1200px;*/
 	justify-content: center;
-	
+
 	padding: 10px;
 }
-#work .flex > * {
+#portfolio .flex > * {
 	margin: 10px;
 	background-color: #f2f2f2;
 }
-#work .flex {
-	padding: 50px;
+#portfolio .flex {
+	flex-direction: row;
+	/*padding: 50px;*/
 	width: auto;
 }
-#work .flex img {
+#portfolio .flex img {
 	max-width: 100%;
-	height: 300px;
+	max-height: 100%;
 }
+@media only screen and (max-width: 700px) {
+	.flex {
+		flex-wrap:wrap;
+	}
+	#about {
+		padding: 50px;
+	}
+}
+
 
 .portfolio-item:hover, .portfolio-item:focus {
 	cursor: pointer;
@@ -183,20 +211,28 @@ header {
 	padding: 10px;
 }
 
-/*--- CONTACT ---*/
-#contact {
-	padding: 100px;
-	text-align: center;
-	background-color: #E9E0DA;
-}
-
 /*--- FOOTER ---*/
 footer {
-	padding: ;
-	text-align: center;
 	background-color: #5D6F7F;
-	min-height: 100px;
-	color: #ffffff;
+}
+
+/*--- CONTACT ---*/
+#contact {
+	text-align: center;
+	background-color: #E9E0DA;
+	min-height: 200px;
+}
+.contact-content {
+	padding: 50px;
+}
+.copy {
+	background-color: #5D6F7F;
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+	line-height: 3em;
+	padding-bottom: 10px;
+	padding-top: 10px;
 }
 
 /*--- PORTFOLIO MODALS ---*/
@@ -231,7 +267,7 @@ footer {
 	margin: 0 auto;
 }
 .modal-content-right {
-	
+
 }
 .modal-footer {
 	padding: 10px;
@@ -250,5 +286,5 @@ footer {
 @keyframes modalopen {
 	from { opacity: 0 }
 	to { opacity: 1 }
-	
+
 }
